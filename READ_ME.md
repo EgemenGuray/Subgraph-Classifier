@@ -53,17 +53,34 @@ e->g->e->m->e->n
   --testing-graphs    STR    Testing graphs folder.       Default is `/input/test/`.
   --prediction-path   STR    Output predictions file.     Default is `output/predictions.csv`.  
 
-  --epochs                      INT     Number of epochs.                  Default is 100.  More epochs better for complex dataset.
-  --batch-size                  INT     Number fo graphs per batch.        Default is 32.   Smaller batches better for learning but increases the time to learn.
+  --epochs                      INT     Number of epochs.                  Default is 100.
+  More epochs better for complex dataset. 
+  
+  --batch-size                  INT     Number fo graphs per batch.        Default is 32.   
+  Smaller batches better for learning but increases the time to learn.
+  
   --gcn-filters                 INT     Number of filters in GCNs.         Default is 20.
-  --gcn-layers                  INT     Number of GCNs chained together.   Default is 2.    More layers helps to represent more features in forms of node embeddings, but makes model to harder to learn.
+  
+  --gcn-layers                  INT     Number of GCNs chained together.   Default is 2.    
+  More layers helps to represent more features in forms of node embeddings, but makes model to harder to learn.
+  
   --inner-attention-dimension   INT     Number of neurons in attention.    Default is 20.  
+  
   --capsule-dimensions          INT     Number of capsule neurons.         Default is 8.
+  
   --number-of-capsules          INT     Number of capsules in layer.       Default is 8.
+  
   --weight-decay                FLOAT   Weight decay of Adam.              Defatuls is 10**-6.
+  
   --lambd                       FLOAT   Regularization parameter.          Default is 0.5.
-  --theta                       FLOAT   Reconstruction loss weight.        Default is 0.1.  Weight for penalizg the GCN layer for creating capsule forms different from the input. Helps model to capture important parts, omit irrelevant parts.
-  --learning-rate               FLOAT   Adam learning rate.                Default is 0.01. Sets the amount of descent on loss vs value of weight function during gradient descent. Higher values overshoots minimum, smaller values increases the number of steps needed to descent.
+  
+  --theta                       FLOAT   Reconstruction loss weight.        Default is 0.1.  
+  
+Weight for penalizg the GCN layer for creating capsule forms different from the input. Helps model to capture important parts, omit irrelevant parts.
+
+  --learning-rate               FLOAT   Adam learning rate.                Default is 0.01.
+Sets the amount of descent on loss vs value of weight function during gradient descent. Higher values overshoots minimum, smaller values increases the number of steps needed to descent.
+
 
  More info in parser.py
 
@@ -137,10 +154,15 @@ model.load_model('20190708-130347.pth')
 	dpkg --list | grep compiler
 
 	ii  g++                             4:5.3.1-1ubuntu1                           amd64        GNU C++ compiler
+	
 	ii  g++-5                           5.4.0-6ubuntu1~16.04.11                    amd64        GNU C++ compiler
+	
 	ii  gcc                             4:5.3.1-1ubuntu1                           amd64        GNU C compiler
+	
 	ii  gcc-5                           5.4.0-6ubuntu1~16.04.11                    amd64        GNU C compiler
+	
 	ii  libllvm6.0:amd64                1:6.0-1ubuntu2~16.04.1                     amd64        Modular compiler and toolchain technologies, runtime library
+	
 	ii  libxkbcommon0:amd64             0.5.0-1ubuntu2.1                           amd64        library interface to the XKB compiler - shared library
 
 	
